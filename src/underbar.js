@@ -9,8 +9,14 @@ var _ = {};
     return val;
   };
   
-  // Like last, but for the first elements
+  // Like last, but for the first n element
   _.first = function(array, n) {
+    if(isNaN(n)){
+      return array[0];
+    }
+    else {
+      return array.slice(0,n);
+    }
   };
 
   // Return an array of the last n elements of an array. If n is undefined,
